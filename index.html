@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Updated title and description with actual couple names -->
+  <title>T & P - Wedding Invitation</title>
+  <meta name="description"
+    content="Join us to celebrate the wedding of Tapan Khatai & Priyanka Barada on February 4, 2026 in Bhubaneswar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="asset/favicon.png">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init("89V8H-StPmamTq8YN");
+    })();
+  </script>
+</head>
+
+<body>
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Ganpati Entrance Screen -->
+  <div id="ganpati-entrance" class="entrance-screen">
+    <!-- Background Mandala -->
+    <div class="mandala-bg">
+      <svg class="mandala rotating" viewBox="0 0 400 400">
+        <g class="mandala-outer" fill="#FFD700" opacity="0.3">
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(0 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(30 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(60 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(90 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(120 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(150 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(180 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(210 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(240 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(270 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(300 200 200)" />
+          <path d="M200,20 Q220,50 200,80 Q180,50 200,20" transform="rotate(330 200 200)" />
+        </g>
+        <circle cx="200" cy="200" r="30" fill="#FFD700" opacity="0.6" />
+        <circle cx="200" cy="200" r="20" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.8" />
+      </svg>
+    </div>
+
+    <!-- Divine Particles Container -->
+    <div id="divine-particles" class="particles-container"></div>
+
+    <!-- Floating Petals -->
+    <div id="entrance-petals" class="petals-container"></div>
+
+    <!-- Corner Decorations -->
+    <div class="corner-decor top-left">
+      <svg viewBox="0 0 100 100" class="corner-svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFD700" />
+            <stop offset="50%" stop-color="#FFA500" />
+            <stop offset="100%" stop-color="#FFD700" />
+          </linearGradient>
+        </defs>
+        <path d="M0,0 Q50,50 0,100 Q50,50 100,100 Q50,50 100,0 Q50,50 0,0" fill="url(#goldGrad)" opacity="0.6" />
+      </svg>
+    </div>
+    <div class="corner-decor top-right">
+      <svg viewBox="0 0 100 100" class="corner-svg">
+        <path d="M0,0 Q50,50 0,100 Q50,50 100,100 Q50,50 100,0 Q50,50 0,0" fill="#FFD700" opacity="0.4" />
+      </svg>
+    </div>
+    <div class="corner-decor bottom-left">
+      <svg viewBox="0 0 100 100" class="corner-svg">
+        <path d="M0,0 Q50,50 0,100 Q50,50 100,100 Q50,50 100,0 Q50,50 0,0" fill="#FFD700" opacity="0.4" />
+      </svg>
+    </div>
+    <div class="corner-decor bottom-right">
+      <svg viewBox="0 0 100 100" class="corner-svg">
+        <path d="M0,0 Q50,50 0,100 Q50,50 100,100 Q50,50 100,0 Q50,50 0,0" fill="#FFD700" opacity="0.4" />
+      </svg>
+    </div>
+
+    <!-- Main Entrance Content -->
+    <div class="entrance-content">
+      <!-- Om Symbol -->
+      <div class="om-symbol animate-fadeIn" style="animation-delay: 0.2s">
+        <div class="om-glow"></div>
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <defs>
+            <filter id="omGlow">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <text x="50" y="75" text-anchor="middle" fill="#FFD700" font-size="70" font-family="serif"
+            filter="url(#omGlow)">ॐ</text>
+        </svg>
+      </div>
+
+      <!-- Shubh Labh -->
+      <div class="shubh-labh animate-fadeIn" style="animation-delay: 0.4s">
+        <span class="shubh glow-text">शुभ</span>
+        <div class="swastik-container">
+          <svg class="swastik-svg rotating" viewBox="0 0 100 100" width="40" height="40">
+            <path d="M50,10 L50,90 M10,50 L90,50" stroke="#FFD700" stroke-width="8" stroke-linecap="round" />
+            <path d="M50,10 L70,10 M50,90 L30,90 M10,50 L10,30 M90,50 L90,70" stroke="#FFD700" stroke-width="8"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="labh glow-text">लाभ</span>
+      </div>
+
+      <!-- Ganpati Idol -->
+      <div class="ganpati-container animate-fadeIn" style="animation-delay: 0.6s">
+        <div class="ganpati-aura aura-1"></div>
+        <div class="ganpati-aura aura-2"></div>
+        <div class="ganpati-aura aura-3"></div>
+        <div class="rotating-ring ring-1"></div>
+        <div class="rotating-ring ring-2"></div>
+        <div class="rotating-ring ring-3"></div>
+
+        <!-- Enhanced Ganpati SVG Idol -->
+        <div class="ganpati-idol-wrapper">
+          <img src="asset/ganpati bappa.png" alt="Lord Ganesha" class="ganpati-idol">
+        </div>
+
+        <!-- Sparkles around Ganpati -->
+        <div id="ganpati-sparkles" class="sparkles-container"></div>
+      </div>
+
+      <!-- Mantra -->
+      <div class="mantra-container animate-fadeIn" style="animation-delay: 1s">
+        <div class="mantra-border">
+          <div class="corner-accent tl"></div>
+          <div class="corner-accent tr"></div>
+          <div class="corner-accent bl"></div>
+          <div class="corner-accent br"></div>
+          <h2 class="mantra-text" id="mantra-line1"></h2>
+          <h2 class="mantra-text" id="mantra-line2"></h2>
+        </div>
+      </div>
+
+      <!-- Diyas -->
+      <div class="diyas-container animate-fadeIn" style="animation-delay: 2s">
+        <div class="diya">
+          <div class="diya-base"></div>
+          <div class="diya-oil"></div>
+          <div class="flame-container">
+            <div class="flame"></div>
+            <div class="flame inner"></div>
+          </div>
+          <div class="flame-glow"></div>
+        </div>
+        <div class="diya">
+          <div class="diya-base"></div>
+          <div class="diya-oil"></div>
+          <div class="flame-container">
+            <div class="flame"></div>
+            <div class="flame inner"></div>
+          </div>
+          <div class="flame-glow"></div>
+        </div>
+        <div class="diya">
+          <div class="diya-base"></div>
+          <div class="diya-oil"></div>
+          <div class="flame-container">
+            <div class="flame"></div>
+            <div class="flame inner"></div>
+          </div>
+          <div class="flame-glow"></div>
+        </div>
+      </div>
+
+      <!-- Enter Button -->
+      <button id="enter-btn" class="enter-button animate-fadeIn" style="animation-delay: 2.8s">
+        <span class="btn-glow"></span>
+        <span class="btn-shimmer"></span>
+        <span class="btn-content">
+          <span class="namaste">🙏</span>
+          <span>Enter with Blessings</span>
+          <span class="namaste">🙏</span>
+        </span>
+      </button>
+
+      <p class="shubh-vivah animate-fadeIn" style="animation-delay: 3.2s">॥ शुभ विवाह ॥</p>
+    </div>
+  </div>
+
+  <!-- Main Wedding Invitation -->
+  <div id="wedding-invitation" class="invitation-container hidden">
+    <!-- Navigation -->
+    <nav id="main-nav" class="main-nav">
+      <!-- Updated logo initials -->
+      <a href="#home" class="nav-logo">
+        <span class="heart-icon">❤</span>
+        <span>T & P</span>
+      </a>
+      <div class="nav-links desktop-nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#couple" class="nav-link">Couple</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#venue" class="nav-link">Venue</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#blessings" class="nav-link">Blessings</a>
+      </div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#couple" class="mobile-link">Couple</a>
+      <a href="#story" class="mobile-link">Our Story</a>
+      <a href="#events" class="mobile-link">Events</a>
+      <a href="#venue" class="mobile-link">Venue</a>
+      <a href="#gallery" class="mobile-link">Gallery</a>
+      <a href="#blessings" class="mobile-link">Blessings</a>
+    </div>
+
+    <!-- Floating Petals for main page -->
+    <div id="main-petals" class="petals-container"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg">
+        <img src="asset/mandap.jpg" alt="Wedding Mandap" class="hero-img">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-ornament hero-animate-fade delay-1">
+          <svg viewBox="0 0 200 80" class="ornament-svg">
+            <defs>
+              <linearGradient id="heroGold" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="50%" stop-color="#FFA500" />
+                <stop offset="100%" stop-color="#FFD700" />
+              </linearGradient>
+            </defs>
+            <path d="M10,40 Q50,10 100,40 Q150,70 190,40" stroke="url(#heroGold)" stroke-width="2" fill="none" />
+            <path d="M10,40 Q50,70 100,40 Q150,10 190,40" stroke="url(#heroGold)" stroke-width="2" fill="none"
+              opacity="0.5" />
+            <circle cx="100" cy="40" r="8" fill="url(#heroGold)" />
+            <circle cx="40" cy="35" r="4" fill="#FFD700" />
+            <circle cx="160" cy="45" r="4" fill="#FFD700" />
+          </svg>
+        </div>
+        <p class="ganesh-blessing hero-animate-up delay-2">॥ श्री गणेशाय नमः ॥</p>
+        <h1 class="hero-title hero-animate-zoom delay-3">Wedding Invitation</h1>
+        <div class="together-text hero-animate-fade delay-4">
+          <span class="star rotating">✦</span>
+          <span>Together with their families</span>
+          <span class="star rotating-reverse">✦</span>
+        </div>
+        <!-- Updated couple names -->
+        <div class="couple-names hero-animate-up delay-5">
+          <span class="groom-name">Tapan</span>
+          <span class="ampersand pulsing">&</span>
+          <span class="bride-name">Priyanka</span>
+        </div>
+        <p class="invitation-text hero-animate-up delay-6">Request the pleasure of your company at their wedding
+          celebration</p>
+        <!-- Updated wedding date -->
+        <div class="date-box hero-animate-zoom delay-7">
+          <div class="date-shimmer"></div>
+          <p class="wedding-date">Wednesday, February 4th, 2026</p>
+          <p class="save-date">Save the Date</p>
+        </div>
+        <div class="scroll-indicator hero-animate-fade delay-8">
+          <span>Scroll to explore</span>
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="countdown-section">
+      <div class="section-divider top"></div>
+      <div class="countdown-content">
+        <span class="countdown-label">Counting Down To</span>
+        <h2 class="countdown-title">Our Special Day</h2>
+        <div class="countdown-timer">
+          <div class="time-unit">
+            <div class="time-box">
+              <span id="days" class="time-value">00</span>
+            </div>
+            <span class="time-label">Days</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit">
+            <div class="time-box">
+              <span id="hours" class="time-value">00</span>
+            </div>
+            <span class="time-label">Hours</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit">
+            <div class="time-box">
+              <span id="minutes" class="time-value">00</span>
+            </div>
+            <span class="time-label">Minutes</span>
+          </div>
+          <span class="time-separator desktop-only">:</span>
+          <div class="time-unit desktop-only">
+            <div class="time-box">
+              <span id="seconds" class="time-value">00</span>
+            </div>
+            <span class="time-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider bottom"></div>
+    </section>
+
+    <!-- Couple Section -->
+    <section id="couple" class="couple-section">
+      <div class="section-header scroll-reveal">
+        <span class="section-label"><span class="heart-gold">❤</span> The Couple <span
+            class="heart-gold">❤</span></span>
+        <h2 class="section-title">Two Souls, One Journey</h2>
+      </div>
+      <div class="couple-grid">
+        <!-- Updated groom details - showing groom first as requested -->
+        <div class="couple-card groom-card scroll-reveal">
+          <div class="photo-frame">
+            <div class="frame-ring ring-animate"></div>
+            <div class="frame-ring ring-animate-reverse"></div>
+            <div class="frame-glow"></div>
+            <img src="asset/bhai potrait.png" alt="Tapan Khatai" class="couple-photo">
+          </div>
+          <h3 class="person-name">Tapan Khatai</h3>
+          <p class="person-parents">Son of Mr. Pratap Chandra Khatai & Mrs. Jhunu Khatai</p>
+          <p class="person-bio">A kind and ambitious soul whose dedication to family and love makes him the perfect life
+            partner.</p>
+        </div>
+        <!-- Updated bride details -->
+        <div class="couple-card bride-card scroll-reveal" style="animation-delay: 0.2s">
+          <div class="photo-frame">
+            <div class="frame-ring ring-animate-reverse"></div>
+            <div class="frame-ring ring-animate"></div>
+            <div class="frame-glow"></div>
+            <img src="asset/bhabhi potrait.jpeg" alt="Priyanka Barada" class="couple-photo">
+          </div>
+          <h3 class="person-name">Priyanka Barada</h3>
+          <p class="person-parents">Daughter of Mr. Khali Barada & Mrs. Namita Barada</p>
+          <p class="person-bio">A compassionate soul with a heart full of dreams, Priyanka brings warmth and grace to
+            everyone she meets.</p>
+        </div>
+      </div>
+      <div class="couple-quote scroll-reveal">
+        <div class="quote-heart pulsing">❤</div>
+        <p>"From strangers to soulmates, our journey began in the most unexpected way... and we cannot wait to
+          write the next chapter together."</p>
+      </div>
+    </section>
+
+    <!-- Love Story Timeline -->
+    <section id="story" class="story-section">
+      <div class="section-header scroll-reveal">
+        <span class="section-label"><span class="heart-gold">❤</span> Our Journey <span
+            class="heart-gold">❤</span></span>
+        <h2 class="section-title">Our Story</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="timeline-progress"></div>
+        </div>
+        <div class="timeline-event left scroll-reveal">
+          <div class="event-content">
+            <span class="event-date">The Beginning</span>
+            <h3 class="event-title">First Meeting</h3>
+            <p class="event-desc">A chance encounter brought two souls together. Little did we know, destiny had bigger
+              plans for us.</p>
+          </div>
+          <div class="event-node"><span class="heart-icon">❤</span></div>
+        </div>
+        <div class="timeline-event right scroll-reveal">
+          <div class="event-content">
+            <span class="event-date">The Moment</span>
+            <h3 class="event-title">Friendship Blooms</h3>
+            <p class="event-desc">With every passing day, we grew up knowing each other more and our bond grew stronger.
+            </p>
+          </div>
+          <div class="event-node"><span class="heart-icon">❤</span></div>
+        </div>
+        <div class="timeline-event left scroll-reveal">
+          <div class="event-content">
+            <span class="event-date">January 2026</span>
+            <h3 class="event-title">Ring Ceremony</h3>
+            <p class="event-desc">With blessings from both families, we are going to exchange rings and make our
+              commitment official.</p>
+          </div>
+          <div class="event-node"><span class="heart-icon">❤</span></div>
+        </div>
+        <div class="timeline-event right scroll-reveal">
+          <div class="event-content">
+            <span class="event-date">February 4, 2026</span>
+            <h3 class="event-title">Forever Begins</h3>
+            <p class="event-desc">Two families unite, two hearts become one. Our journey of forever going to start
+              here in Bhubaneswar.</p>
+          </div>
+          <div class="event-node"><span class="heart-icon">❤</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <!-- Updated events to Ring Ceremony, Mehndi, Wedding, Reception -->
+    <section id="events" class="events-section">
+      <div class="events-bg-circles">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+      </div>
+      <div class="section-header light scroll-reveal">
+        <span class="section-label"><span class="sparkle">✦</span> Wedding Events <span class="sparkle">✦</span></span>
+        <h2 class="section-title">Celebrate With Us</h2>
+        <p class="section-subtitle">Click on any event to learn more</p>
+      </div>
+      <div class="events-grid">
+        <!-- Ring Ceremony -->
+        <div class="event-card scroll-reveal" data-color="#FFD700">
+          <div class="event-accent"></div>
+          <div class="event-icon">💍</div>
+          <div class="event-info">
+            <h3 class="event-name">Ring Ceremony</h3>
+            <p class="event-description">The auspicious engagement ceremony to celebrate our commitment</p>
+          </div>
+          <div class="event-datetime">
+            <div class="event-date-info">📅 January 25, 2026</div>
+            <div class="event-time-info">🕖 1:00 PM onwards</div>
+          </div>
+          <div class="event-details">
+            <p>Join us for the sacred ring exchange ceremony where we officially begin our journey together with
+              blessings from our families.</p>
+          </div>
+        </div>
+        <!-- Mehndi -->
+        <div class="event-card scroll-reveal" data-color="#FF6B6B">
+          <div class="event-accent"></div>
+          <div class="event-icon">🎨</div>
+          <div class="event-info">
+            <h3 class="event-name">Mehndi Ceremony</h3>
+            <p class="event-description">Join us for an evening of beautiful henna, music, and celebration</p>
+          </div>
+          <div class="event-datetime">
+            <div class="event-date-info">📅 February 3, 2026</div>
+            <div class="event-time-info">🕔 5:00 PM onwards</div>
+          </div>
+          <div class="event-details">
+            <p>Witness the beautiful art of Mehndi as intricate designs adorn the bride. Enjoy folk music, dance, and
+              delicious snacks.</p>
+          </div>
+        </div>
+        <!-- Wedding Ceremony -->
+        <div class="event-card scroll-reveal" data-color="#8B0000">
+          <div class="event-accent"></div>
+          <div class="event-icon">💒</div>
+          <div class="event-info">
+            <h3 class="event-name">Wedding Ceremony</h3>
+            <p class="event-description">The sacred union of two souls as per Vedic rituals</p>
+          </div>
+          <div class="event-datetime">
+            <div class="event-date-info">📅 February 4, 2026</div>
+            <div class="event-time-info">🕚 11:00 PM - Shubh Muhurat</div>
+          </div>
+          <div class="event-details">
+            <p>The main event! Traditional Vedic wedding ceremony with pheras, varmala, and all sacred rituals.
+              Blessings of Lord Ganesha upon the couple.</p>
+          </div>
+        </div>
+        <!-- Reception -->
+        <div class="event-card scroll-reveal" data-color="#9C27B0">
+          <div class="event-accent"></div>
+          <div class="event-icon">🎉</div>
+          <div class="event-info">
+            <h3 class="event-name">Reception</h3>
+            <p class="event-description">Celebrate with dinner, dance, and blessings for the newlyweds</p>
+          </div>
+          <div class="event-datetime">
+            <div class="event-date-info">📅 February 6, 2026</div>
+            <div class="event-time-info">🕖 12:30 PM onwards</div>
+          </div>
+          <div class="event-details">
+            <p>A grand celebration with gourmet dinner, live music, and an unforgettable evening with loved ones. Join
+              us to bless the newlyweds!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue Section -->
+    <!-- Updated venue details for Bhubaneswar -->
+    <section id="venue" class="venue-section">
+      <div class="venue-glow"></div>
+      <div class="section-header scroll-reveal">
+        <span class="section-label">📍 Location 📍</span>
+        <h2 class="section-title">Wedding Venue</h2>
+      </div>
+      <div class="venue-grid">
+        <div class="venue-image-container scroll-reveal">
+          <div class="venue-frame"></div>
+          <div class="venue-frame-outer"></div>
+          <img src="asset/venue.png" alt="Wedding Venue" class="venue-image">
+          <div class="venue-image-overlay">
+            <h3>Shanti Bhawan</h3>
+            <p>Bhubaneswar, Odisha</p>
+          </div>
+        </div>
+        <div class="venue-info scroll-reveal">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>Address</strong>
+              <p>Plot No 44, Shanti Bhawan<br>Lane-1A, GA Colony, Shreeram Vihar<br>Bharatpur, Bhubaneswar - 751029</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <div class="info-text">
+              <strong>Wedding Ceremony</strong>
+              <p>February 4, 2026 at 11:00 PM<br>(Shubh Muhurat)</p>
+            </div>
+          </div>
+          <a href="tel:+919938052845" class="info-card">
+            <div class="info-icon">📞</div>
+            <div class="info-text">
+              <strong>Contact</strong>
+              <p>+91 99380 52845</p>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/YDXJeaq5NVYiGQ72A" target="_blank" class="directions-btn">
+            🧭 Get Directions
+          </a>
+        </div>
+      </div>
+
+      <div class="venue-map scroll-reveal">
+        <img src="asset/map.jpg" alt="Venue Map" class="map-image">
+        <div class="map-overlay">
+          <a href="https://maps.app.goo.gl/YDXJeaq5NVYiGQ72A" target="_blank" class="map-btn">📍 Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-header scroll-reveal">
+        <span class="section-label">📷 Memories 📷</span>
+        <h2 class="section-title">Our Gallery</h2>
+      </div>
+      <div class="gallery-filters scroll-reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+        <button class="filter-btn" data-filter="engagement">Ring Ceremony</button>
+        <button class="filter-btn" data-filter="portraits">Portraits</button>
+        <button class="filter-btn" data-filter="mehendi">Mehendi</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+
+
+        <div class="gallery-item" data-category="engagement">
+          <img src="asset/rings example.png" alt="Ring Ceremony">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Ring Ceremony</p>
+            <span class="gallery-category">Ring Ceremony</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+
+        <div class="gallery-item" data-category="engagement">
+          <img src="asset/rings example2.png" alt="Ring Exchange">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Ring Exchange</p>
+            <span class="gallery-category">Ring Ceremony</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+
+        <div class="gallery-item tall" data-category="portraits">
+          <img src="asset/bhai potrait.png" alt="Groom Portrait">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Groom Portrait</p>
+            <span class="gallery-category">Portraits</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+        <div class="gallery-item" data-category="mehendi">
+          <img src="asset/mehendi.jpg" alt="Mehndi">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Mehndi Celebration</p>
+            <span class="gallery-category">Mehendi</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+
+        <div class="gallery-item" data-category="mehendi">
+          <img src="asset/mehendi2.png" alt="Mehndi Design">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Traditional Henna</p>
+            <span class="gallery-category">Mehendi</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+        <div class="gallery-item" data-category="portraits">
+          <img src="asset/bhabhi potrait.jpeg" alt="Bridal portrait">
+          <div class="gallery-overlay">
+            <p class="gallery-title">Bridal Portrait</p>
+            <span class="gallery-category">Portraits</span>
+          </div>
+          <button class="like-btn">❤</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox hidden">
+      <button class="lightbox-close">✕</button>
+      <button class="lightbox-prev">❮</button>
+      <button class="lightbox-next">❯</button>
+      <img id="lightbox-img" src="asset/elegant-indian-wedding-mandap-decoration-with-flow.jpg" alt="Gallery image">
+      <div class="lightbox-info">
+        <p id="lightbox-title"></p>
+        <span id="lightbox-category"></span>
+      </div>
+      <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">8</span></div>
+    </div>
+
+    <!-- Blessings Section -->
+    <section id="blessings" class="blessings-section">
+      <div class="blessings-decor circle-1"></div>
+      <div class="blessings-decor circle-2"></div>
+      <div class="section-header scroll-reveal">
+        <span class="section-label">✨ Share Your Love ✨</span>
+        <h2 class="section-title">Blessings Wall</h2>
+        <p class="section-subtitle">Leave your blessings and wishes for Tapan & Priyanka</p>
+      </div>
+      <div class="blessings-grid">
+        <div class="blessings-form-container scroll-reveal">
+          <form id="blessing-form" class="blessing-form">
+            <h3>Send Your Blessings</h3>
+            <input type="text" id="blessing-name" placeholder="Your Name" required>
+            <textarea id="blessing-message" placeholder="Your blessing or message for us..." rows="4"
+              required></textarea>
+            <button type="submit" class="send-blessing-btn">
+              ✉️ Send Blessing
+            </button>
+            <p id="blessing-success" class="success-message hidden">Thank you for your blessings!</p>
+          </form>
+        </div>
+        <div class="blessings-list scroll-reveal" id="blessings-list">
+          <!-- Blessings will be added here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <!-- Updated RSVP section with new events and deadline -->
+
+
+    <!-- Footer -->
+    <!-- Updated footer with actual couple details and hashtag -->
+    <footer class="main-footer">
+      <div class="footer-top-border"></div>
+      <div class="footer-content">
+        <div class="footer-logo animate-pulse">
+          <span class="heart-icon">❤</span>
+          <span>T & P</span>
+          <span class="heart-icon">❤</span>
+        </div>
+
+        <h3 class="footer-welcome-text">We Await Your Presence</h3>
+
+        <div class="footer-compliments">
+          <p class="compliments-label">With Best Compliments from:</p>
+          <h3 class="parents-names">Mr. Pratap Chandra Khatai</h3>
+          <h3 class="parents-names">Mrs. Jhunu Khatai</h3>
+        </div>
+        <p class="footer-date">February 4, 2026 • Bhubaneswar, Odisha</p>
+
+        <div class="footer-divider-ornament">
+          <svg viewBox="0 0 100 20" width="100" height="20">
+            <path d="M0,10 Q50,0 100,10" fill="none" stroke="#FFD700" stroke-width="2" />
+            <circle cx="50" cy="5" r="3" fill="#FFD700" />
+          </svg>
+        </div>
+
+        <div class="footer-contact-info">
+          <a href="https://maps.app.goo.gl/YDXJeaq5NVYiGQ72A" target="_blank" class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Shanti Bhawan, Bharatpur</span>
+          </a>
+          <a href="tel:+919938052845" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>+91 99380 52845</span>
+          </a>
+          <a href="tel:+918984015144" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>+91 89840 15144</span>
+          </a>
+        </div>
+
+        <div class="footer-social">
+          <h3 class="hashtag">#TapanWedsPriyanka</h3>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-shubh">॥ शुभ विवाह ॥</p>
+          <p>Made with ❤ for the lovely couple by <a href="https://www.instagram.com/rudra.__18._/?__pwa=1"
+              target="_blank" class="credit-link">Raja <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"
+                style="vertical-align: middle; margin-left: 2px; margin-bottom: 2px;">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.232-.047c-.78-.036-1.203-.166-1.486-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+              </svg></a></p>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
