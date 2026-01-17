@@ -533,7 +533,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: safe;
   padding: 1rem;
   text-align: center;
   max-width: 600px;
@@ -883,7 +883,7 @@ a {
   color: rgba(255, 215, 0, 0.7);
   font-family: var(--font-serif);
   font-size: 1.25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   letter-spacing: 0.1em;
 }
 
@@ -1161,7 +1161,7 @@ a {
 }
 
 .hero-ornament {
-  margin-bottom: 2rem;
+  margin-bottom: -1rem;
 }
 
 .ornament-svg {
@@ -1172,8 +1172,8 @@ a {
 .ganesh-blessing {
   color: var(--gold);
   font-family: var(--font-serif);
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
   animation: textGlow 3s ease-in-out infinite;
 }
@@ -1181,8 +1181,8 @@ a {
 .hero-title {
   color: var(--gold-light);
   font-family: var(--font-serif);
-  font-size: 2.5rem;
-  margin-bottom: 0.25rem;
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -1193,7 +1193,6 @@ a {
   gap: 1rem;
   color: var(--gold);
   font-size: 1rem;
-  margin-bottom: 2rem;
 }
 
 .star {
@@ -1201,6 +1200,7 @@ a {
 }
 
 .couple-names {
+  margin-top: 1.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1209,7 +1209,7 @@ a {
   display: block;
   color: var(--gold-light);
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  font-size: 3rem;
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -1227,25 +1227,25 @@ a {
   font-family: var(--font-serif);
   font-size: 2rem;
   margin-top: 0.5rem;
-  margin-bottom: -1.2rem;
+  margin-bottom: 0.15rem;
   line-height: 1;
 }
 
 .invitation-text {
   color: var(--gold-light);
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0.9;
 }
 
 .date-box {
   position: relative;
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 0.5rem 2.5rem;
   background: rgba(255, 215, 0, 0.1);
   backdrop-filter: blur(10px);
-  border: 2px solid var(--gold);
-  border-radius: 1rem;
+  border: 1.2px solid var(--gold);
+  border-radius: 2rem;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -1278,7 +1278,7 @@ a {
 }
 
 .scroll-indicator {
-  margin-top: 3rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1294,7 +1294,7 @@ a {
   border-radius: 12px;
   display: flex;
   justify-content: center;
-  padding-top: 8px;
+  padding-top: 7px;
 }
 
 .scroll-wheel {
@@ -1427,7 +1427,7 @@ a {
    ===================================================== */
 
 .couple-section {
-  padding: 5rem 1rem;
+  padding: 4.5rem 1rem;
   background: var(--cream);
   position: relative;
   overflow: hidden;
@@ -2130,7 +2130,7 @@ a {
    ===================================================== */
 
 .gallery-section {
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
   background: linear-gradient(to bottom, var(--cream), var(--gold-light));
 }
 
@@ -2414,7 +2414,7 @@ a {
   color: var(--deep-red);
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .blessing-form input,
@@ -2537,271 +2537,12 @@ a {
 }
 
 /* =====================================================
-   RSVP SECTION
-   ===================================================== */
-
-.rsvp-section {
-  padding: 5rem 1rem;
-  background: linear-gradient(135deg, var(--deep-red), var(--maroon));
-  position: relative;
-  overflow: hidden;
-}
-
-.rsvp-bg-circles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.rsvp-circle {
-  position: absolute;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  border-radius: 50%;
-}
-
-.rsvp-circle.circle-1 {
-  top: -100px;
-  right: -100px;
-  width: 400px;
-  height: 400px;
-  animation: rotate 60s linear infinite;
-}
-
-.rsvp-circle.circle-2 {
-  bottom: -150px;
-  left: -150px;
-  width: 500px;
-  height: 500px;
-  animation: rotateReverse 80s linear infinite;
-}
-
-.rsvp-form-container {
-  max-width: 700px;
-  margin: 0 auto;
-  background: rgba(255, 248, 220, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2.5rem;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  position: relative;
-}
-
-.rsvp-form label {
-  display: block;
-  color: var(--gold-light);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.form-row {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.form-group {
-  margin-bottom: 0.5rem;
-}
-
-.input-wrapper {
-  position: relative;
-}
-
-.input-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-}
-
-.textarea-wrapper .input-icon {
-  top: 1rem;
-  transform: none;
-}
-
-.rsvp-form input,
-.rsvp-form textarea,
-.rsvp-form select {
-  width: 100%;
-  padding: 1rem;
-  padding-left: 3rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 0.5rem;
-  color: var(--gold-light);
-  font-family: inherit;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.rsvp-form select {
-  padding-left: 1rem;
-  cursor: pointer;
-}
-
-.rsvp-form input::placeholder,
-.rsvp-form textarea::placeholder {
-  color: rgba(255, 248, 220, 0.5);
-}
-
-.rsvp-form input:focus,
-.rsvp-form textarea:focus,
-.rsvp-form select:focus {
-  outline: none;
-  border-color: var(--gold);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
-}
-
-.attend-btns {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.attend-btn {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 0.5rem;
-  color: var(--gold-light);
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-}
-
-.attend-btn:hover {
-  background: rgba(255, 215, 0, 0.1);
-}
-
-.attend-btn.active {
-  background: var(--gold);
-  color: var(--deep-red);
-  border-color: var(--gold);
-  font-weight: 600;
-}
-
-.events-selection {
-  margin-top: 1rem;
-}
-
-.event-checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.event-checkbox {
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 50px;
-  color: var(--gold-light);
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-}
-
-.event-checkbox:hover {
-  background: rgba(255, 215, 0, 0.1);
-}
-
-.event-checkbox.active {
-  background: var(--gold);
-  color: var(--deep-red);
-  border-color: var(--gold);
-}
-
-.submit-rsvp-btn {
-  width: 100%;
-  padding: 1.25rem;
-  background: var(--gold);
-  color: var(--deep-red);
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
-}
-
-.submit-rsvp-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.4);
-}
-
-.rsvp-success {
-  text-align: center;
-  padding: 3rem;
-}
-
-.success-icon {
-  width: 80px;
-  height: 80px;
-  background: var(--gold);
-  color: var(--deep-red);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin: 0 auto 1.5rem;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.rsvp-success h3 {
-  color: var(--gold);
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.rsvp-success p {
-  color: var(--gold-light);
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-.success-hearts {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.success-hearts span {
-  color: var(--gold);
-  font-size: 1.5rem;
-  animation: pulse 1s ease-in-out infinite;
-}
-
-.success-hearts span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.success-hearts span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.success-hearts span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.success-hearts span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-/* =====================================================
    FOOTER
-   ===================================================== */
-
-/* =====================================================
-   FOOTER - Redesigned
    ===================================================== */
 
 .main-footer {
   background: linear-gradient(to bottom, #2c0e0e, #1a0505);
-  padding: 3rem 1rem 2rem;
+  padding: 1.5rem 1rem 2rem;
   position: relative;
   text-align: center;
   color: var(--gold-light);
@@ -2839,10 +2580,10 @@ a {
 
 .footer-welcome-text {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--gold);
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -2855,15 +2596,15 @@ a {
 }
 
 .compliments-label {
-  font-size: 0.9rem;
-  color: rgba(255, 248, 220, 0.6);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Dancing Script", cursive;
   letter-spacing: 1px;
 }
 
 .parents-names {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: linear-gradient(to right, var(--gold), #ffecb3, var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
@@ -2875,22 +2616,22 @@ a {
 .footer-date {
   font-size: 1.1rem;
   letter-spacing: 1px;
-  color: rgba(255, 248, 220, 0.8);
+  color: rgba(238, 233, 215, 0.8);
   font-weight: 300;
   text-transform: uppercase;
 }
 
 .footer-divider-ornament {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   opacity: 0.8;
 }
 
 .footer-contact-info {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-item {
@@ -2921,12 +2662,12 @@ a {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
 }
 
 .footer-bottom {
   margin-top: 1rem;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   border-top: 1px solid rgba(255, 215, 0, 0.1);
   width: 100%;
 }
@@ -3212,4 +2953,40 @@ a {
 
 .delay-8 {
   animation-delay: 1.6s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-2-8s {
+  animation-delay: 2.8s;
+}
+
+.delay-3-2s {
+  animation-delay: 3.2s;
+}
+
+.footer-instagram-icon {
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-2-8s {
+  animation-delay: 2.8s;
+}
+
+.delay-3-2s {
+  animation-delay: 3.2s;
+}
+
+.footer-instagram-icon {
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-bottom: 2px;
 }
