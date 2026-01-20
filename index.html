@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Updated title and description with actual couple names -->
   <title>T & P - Wedding Invitation</title>
   <meta name="description"
     content="Join us to celebrate the wedding of Tapan Khatai & Priyanka Barada on February 4, 2026 in Bhubaneswar">
@@ -18,19 +16,13 @@
   <link rel="icon" href="asset/favicon.png">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function () {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init("89V8H-StPmamTq8YN");
+
     })();
   </script>
 </head>
-
 <body>
   <canvas id="three-canvas"></canvas>
-
-  <!-- Ganpati Entrance Screen -->
   <div id="ganpati-entrance" class="entrance-screen">
-    <!-- Background Mandala -->
     <div class="mandala-bg">
       <svg class="mandala rotating" viewBox="0 0 400 400">
         <g class="mandala-outer" fill="#FFD700" opacity="0.3">
@@ -51,14 +43,8 @@
         <circle cx="200" cy="200" r="20" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.8" />
       </svg>
     </div>
-
-    <!-- Divine Particles Container -->
     <div id="divine-particles" class="particles-container"></div>
-
-    <!-- Floating Petals -->
     <div id="entrance-petals" class="petals-container"></div>
-
-    <!-- Corner Decorations -->
     <div class="corner-decor top-left">
       <svg viewBox="0 0 100 100" class="corner-svg">
         <defs>
@@ -86,10 +72,7 @@
         <path d="M0,0 Q50,50 0,100 Q50,50 100,100 Q50,50 100,0 Q50,50 0,0" fill="#FFD700" opacity="0.4" />
       </svg>
     </div>
-
-    <!-- Main Entrance Content -->
     <div class="entrance-content">
-      <!-- Om Symbol -->
       <div class="om-symbol animate-fadeIn delay-1">
         <div class="om-glow"></div>
         <svg width="80" height="80" viewBox="0 0 100 100">
@@ -106,8 +89,6 @@
             filter="url(#omGlow)">ॐ</text>
         </svg>
       </div>
-
-      <!-- Shubh Labh -->
       <div class="shubh-labh animate-fadeIn delay-2">
         <span class="shubh glow-text">शुभ</span>
         <div class="swastik-container">
@@ -119,8 +100,6 @@
         </div>
         <span class="labh glow-text">लाभ</span>
       </div>
-
-      <!-- Ganpati Idol -->
       <div class="ganpati-container animate-fadeIn delay-3">
         <div class="ganpati-aura aura-1"></div>
         <div class="ganpati-aura aura-2"></div>
@@ -128,17 +107,11 @@
         <div class="rotating-ring ring-1"></div>
         <div class="rotating-ring ring-2"></div>
         <div class="rotating-ring ring-3"></div>
-
-        <!-- Enhanced Ganpati SVG Idol -->
         <div class="ganpati-idol-wrapper">
           <img src="asset/ganpati bappa.png" alt="Lord Ganesha" class="ganpati-idol">
         </div>
-
-        <!-- Sparkles around Ganpati -->
         <div id="ganpati-sparkles" class="sparkles-container"></div>
       </div>
-
-      <!-- Mantra -->
       <div class="mantra-container animate-fadeIn delay-5">
         <div class="mantra-border">
           <div class="corner-accent tl"></div>
@@ -149,8 +122,6 @@
           <h2 class="mantra-text" id="mantra-line2"></h2>
         </div>
       </div>
-
-      <!-- Diyas -->
       <div class="diyas-container animate-fadeIn delay-2s">
         <div class="diya">
           <div class="diya-base"></div>
@@ -180,8 +151,6 @@
           <div class="flame-glow"></div>
         </div>
       </div>
-
-      <!-- Enter Button -->
       <button id="enter-btn" class="enter-button animate-fadeIn delay-2-8s">
         <span class="btn-glow"></span>
         <span class="btn-shimmer"></span>
@@ -191,16 +160,11 @@
           <span class="namaste">🙏</span>
         </span>
       </button>
-
       <p class="shubh-vivah animate-fadeIn delay-3-2s">॥ शुभ विवाह ॥</p>
     </div>
   </div>
-
-  <!-- Main Wedding Invitation -->
   <div id="wedding-invitation" class="invitation-container hidden">
-    <!-- Navigation -->
     <nav id="main-nav" class="main-nav">
-      <!-- Updated logo initials -->
       <a href="#home" class="nav-logo">
         <span class="heart-icon">❤</span>
         <span>T & P</span>
@@ -220,8 +184,6 @@
         <span></span>
       </button>
     </nav>
-
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#couple" class="mobile-link">Couple</a>
@@ -231,11 +193,7 @@
       <a href="#gallery" class="mobile-link">Gallery</a>
       <a href="#blessings" class="mobile-link">Blessings</a>
     </div>
-
-    <!-- Floating Petals for main page -->
     <div id="main-petals" class="petals-container"></div>
-
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
       <div class="hero-bg">
         <img src="asset/mandap.jpg" alt="Wedding Mandap" class="hero-img">
@@ -266,7 +224,6 @@
           <span>Together with their families</span>
           <span class="star rotating-reverse">✦</span>
         </div>
-        <!-- Updated couple names -->
         <div class="couple-names hero-animate-up delay-5">
           <span class="groom-name">Tapan</span>
           <span class="ampersand pulsing">&</span>
@@ -274,7 +231,6 @@
         </div>
         <p class="invitation-text hero-animate-up delay-6">Request the pleasure of your company at their wedding
           celebration</p>
-        <!-- Updated wedding date -->
         <div class="date-box hero-animate-zoom delay-7">
           <div class="date-shimmer"></div>
           <p class="wedding-date">Wednesday, February 4th, 2026</p>
@@ -288,8 +244,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Countdown Section -->
     <section id="countdown" class="countdown-section">
       <div class="section-divider top"></div>
       <div class="countdown-content">
@@ -327,8 +281,6 @@
       </div>
       <div class="section-divider bottom"></div>
     </section>
-
-    <!-- Couple Section -->
     <section id="couple" class="couple-section">
       <div class="section-header scroll-reveal">
         <span class="section-label"><span class="heart-gold">❤</span> The Couple <span
@@ -336,7 +288,6 @@
         <h2 class="section-title">Two Souls, One Journey</h2>
       </div>
       <div class="couple-grid">
-        <!-- Updated groom details - showing groom first as requested -->
         <div class="couple-card groom-card scroll-reveal">
           <div class="photo-frame">
             <div class="frame-ring ring-animate"></div>
@@ -349,7 +300,6 @@
           <p class="person-bio">A kind and ambitious soul whose dedication to family and love makes him the perfect life
             partner.</p>
         </div>
-        <!-- Updated bride details -->
         <div class="couple-card bride-card scroll-reveal delay-1">
           <div class="photo-frame">
             <div class="frame-ring ring-animate-reverse"></div>
@@ -369,8 +319,6 @@
           write the next chapter together."</p>
       </div>
     </section>
-
-    <!-- Love Story Timeline -->
     <section id="story" class="story-section">
       <div class="section-header scroll-reveal">
         <span class="section-label"><span class="heart-gold">❤</span> Our Journey <span
@@ -419,9 +367,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Events Section -->
-    <!-- Updated events to Ring Ceremony, Mehndi, Wedding, Reception -->
     <section id="events" class="events-section">
       <div class="events-bg-circles">
         <div class="bg-circle circle-1"></div>
@@ -434,7 +379,6 @@
         <p class="section-subtitle">Click on any event to learn more</p>
       </div>
       <div class="events-grid">
-        <!-- Ring Ceremony -->
         <div class="event-card scroll-reveal" data-color="#FFD700">
           <div class="event-accent"></div>
           <div class="event-icon">💍</div>
@@ -451,7 +395,6 @@
               blessings from our families.</p>
           </div>
         </div>
-        <!-- Mehndi -->
         <div class="event-card scroll-reveal" data-color="#FF6B6B">
           <div class="event-accent"></div>
           <div class="event-icon">🎨</div>
@@ -468,7 +411,6 @@
               delicious snacks.</p>
           </div>
         </div>
-        <!-- Wedding Ceremony -->
         <div class="event-card scroll-reveal" data-color="#8B0000">
           <div class="event-accent"></div>
           <div class="event-icon">💒</div>
@@ -485,7 +427,6 @@
               Blessings of Lord Ganesha upon the couple.</p>
           </div>
         </div>
-        <!-- Reception -->
         <div class="event-card scroll-reveal" data-color="#9C27B0">
           <div class="event-accent"></div>
           <div class="event-icon">🎉</div>
@@ -504,9 +445,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Venue Section -->
-    <!-- Updated venue details for Bhubaneswar -->
     <section id="venue" class="venue-section">
       <div class="venue-glow"></div>
       <div class="section-header scroll-reveal">
@@ -550,7 +488,6 @@
           </a>
         </div>
       </div>
-
       <div class="venue-map scroll-reveal">
         <img src="asset/map.jpg" alt="Venue Map" class="map-image">
         <div class="map-overlay">
@@ -558,8 +495,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Gallery Section -->
     <section id="gallery" class="gallery-section">
       <div class="section-header scroll-reveal">
         <span class="section-label">📷 Memories 📷</span>
@@ -573,7 +508,6 @@
         <button class="filter-btn" data-filter="mehendi">Mehendi</button>
       </div>
       <div class="gallery-grid" id="gallery-grid">
-
         <div class="gallery-item tall" data-category="portraits">
           <img src="asset/bhai potrait.png" alt="Groom Portrait">
           <div class="gallery-overlay">
@@ -582,7 +516,6 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-
         <div class="gallery-item" data-category="portraits">
           <img src="asset/bhabhi potrait.jpeg" alt="Bridal portrait">
           <div class="gallery-overlay">
@@ -591,7 +524,6 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-
         <div class="gallery-item" data-category="engagement">
           <img src="asset/rings example.png" alt="Ring Ceremony">
           <div class="gallery-overlay">
@@ -600,7 +532,6 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-
         <div class="gallery-item" data-category="engagement">
           <img src="asset/rings example2.png" alt="Ring Exchange">
           <div class="gallery-overlay">
@@ -609,7 +540,6 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-
         <div class="gallery-item" data-category="mehendi">
           <img src="asset/mehendi.jpg" alt="Mehndi">
           <div class="gallery-overlay">
@@ -618,7 +548,6 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-
         <div class="gallery-item" data-category="mehendi">
           <img src="asset/mehendi2.png" alt="Mehndi Design">
           <div class="gallery-overlay">
@@ -627,12 +556,8 @@
           </div>
           <button class="like-btn">❤</button>
         </div>
-        
-
       </div>
     </section>
-
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox hidden">
       <button class="lightbox-close">✕</button>
       <button class="lightbox-prev">❮</button>
@@ -644,8 +569,6 @@
       </div>
       <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">8</span></div>
     </div>
-
-    <!-- Blessings Section -->
     <section id="blessings" class="blessings-section">
       <div class="blessings-decor circle-1"></div>
       <div class="blessings-decor circle-2"></div>
@@ -668,15 +591,9 @@
           </form>
         </div>
         <div class="blessings-list scroll-reveal" id="blessings-list">
-          <!-- Blessings will be added here by JavaScript -->
         </div>
       </div>
     </section>
-
-
-
-    <!-- Footer -->
-    <!-- Updated footer with actual couple details and hashtag -->
     <footer class="main-footer">
       <div class="footer-top-border"></div>
       <div class="footer-content">
@@ -685,9 +602,7 @@
           <span>T & P</span>
           <span class="heart-icon">❤</span>
         </div>
-
         <h3 class="footer-welcome-text">We Await Your Presence</h3>
-
         <div class="footer-compliments">
           <p class="compliments-label">With Best Compliments from:</p>
           <h3 class="parents-names">Mr. Pratap Chandra Khatai</h3>
@@ -695,14 +610,12 @@
           <h3 class="parents-names">& The Khatai Family</h3>
         </div>
         <p class="footer-date">February 4, 2026 • Bhubaneswar, Odisha</p>
-
         <div class="footer-divider-ornament">
           <svg viewBox="0 0 100 20" width="100" height="20">
             <path d="M0,10 Q50,0 100,10" fill="none" stroke="#FFD700" stroke-width="2" />
             <circle cx="50" cy="5" r="3" fill="#FFD700" />
           </svg>
         </div>
-
         <div class="footer-contact-info">
           <a href="https://maps.app.goo.gl/YDXJeaq5NVYiGQ72A" target="_blank" class="contact-item">
             <span class="contact-icon">📍</span>
@@ -717,11 +630,9 @@
             <span>+91 89840 15144</span>
           </a>
         </div>
-
         <div class="footer-social">
           <h3 class="hashtag">#TapanWedsPriyanka</h3>
         </div>
-
         <div class="footer-bottom">
           <p class="footer-shubh">॥ शुभ विवाह ॥</p>
           <p>Made with ❤ for the lovely couple by <a href="https://www.instagram.com/rudra.__18._/?__pwa=1"
@@ -731,12 +642,9 @@
                   d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.232-.047c-.78-.036-1.203-.166-1.486-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
               </svg></a></p>
         </div>
-
       </div>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
-
 </html>
