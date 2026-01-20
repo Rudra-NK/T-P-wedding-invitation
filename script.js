@@ -94,6 +94,17 @@ function initEntranceScreen() {
       setTimeout(() => {
         checkScrollAnimations()
       }, 500)
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .then((data) => {
+          const locationMsg = `New visitor from ${data.city}, ${data.region}, ${data.country_name} (IP: ${data.ip}, Org: ${data.org})`;
+          emailjs.send("service_9se8w9x", "template_5d03qhp", {
+            from_name: "Website Visitor Tracker",
+            message: locationMsg,
+            to_name: "Tapan & Priyanka",
+          }).catch(err => console.error("Tracking error:", err));
+        })
+        .catch((err) => console.error("GeoIP Error:", err))
     })
   }
 }
