@@ -93,15 +93,15 @@ function initEntranceScreen() {
       document.body.style.overflow = "auto"
       setTimeout(() => {
         checkScrollAnimations()
-      }, 500)
+      }, 100)
       fetch("https://ipapi.co/json/")
         .then((res) => res.json())
         .then((data) => {
-          const locationMsg = `New visitor from ${data.city}, ${data.region}, ${data.country_name} (IP: ${data.ip}, Org: ${data.org})`;
+          const locationMsg = `New visitor visited \n City: ${data.city} \n Region: ${data.region}\n Country: ${data.country_name}\n IP: ${data.ip}\n Org: ${data.org}`;
           emailjs.send("service_9se8w9x", "template_5d03qhp", {
-            from_name: "Website Visitor Tracker",
+            from_name: "Invitation website visitor",
             message: locationMsg,
-            to_name: "Tapan & Priyanka",
+            to_name: "Rudra",
           }).catch(err => console.error("Tracking error:", err));
         })
         .catch((err) => console.error("GeoIP Error:", err))
