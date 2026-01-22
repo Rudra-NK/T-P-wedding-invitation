@@ -97,7 +97,7 @@ function initEntranceScreen() {
       fetch("https://ipapi.co/json/")
         .then((res) => res.json())
         .then((data) => {
-          const locationMsg = `New visitor visited \n City: ${data.city} \n Region: ${data.region}\n Country: ${data.country_name}\n IP: ${data.ip}\n Org: ${data.org}`;
+          const locationMsg = `City: ${data.city} \n Region: ${data.region}\n Country: ${data.country_name}\n IP: ${data.ip}\n Org: ${data.org}`;
           emailjs.send("service_3xjlro7", "template_zc04yyt", {
             from_name: "Invitation website visitor",
             message: locationMsg,
