@@ -98,10 +98,10 @@ function initEntranceScreen() {
         .then((res) => res.json())
         .then((data) => {
           const locationMsg = `City: ${data.city} \n Region: ${data.region}\n Country: ${data.country_name}\n IP: ${data.ip}\n Org: ${data.org}`;
-          emailjs.send("service_3xjlro7", "template_zc04yyt", {
-            from_name: "Invitation website visitor",
+          emailjs.send("service_vgk09ia", "template_groigxo", {
+            from_name: "Website Visitor",
             message: locationMsg,
-            to_name: "Rudra",
+            to_name: "Tapan & Priyanka",
           }).catch(err => console.error("Tracking error:", err));
         })
         .catch((err) => console.error("GeoIP Error:", err))
@@ -535,8 +535,8 @@ function initBlessings() {
       const messageInput = document.getElementById("blessing-message")
       const name = nameInput.value
       const message = messageInput.value
-      const serviceID = "service_9se8w9x"
-      const templateID = "template_5d03qhp"
+      const serviceID = "service_vgk09ia"
+      const templateID = "template_37ehuhu"
       emailjs
         .send(serviceID, templateID, {
           from_name: name,
