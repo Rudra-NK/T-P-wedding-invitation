@@ -11,9 +11,9 @@
   --coral: #ff6b6b;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Poppins", -apple-system, sans-serif;
-  --shadow-gold: 0 0 20px rgba(255, 215, 0, 0.4);
-  --shadow-gold-lg: 0 0 40px rgba(255, 215, 0, 0.6);
-  --card-shadow: 0 10px 30px rgba(136, 14, 79, 0.15);
+  --shadow-gold: 0 0 1.25rem rgba(255, 215, 0, 0.4);
+  --shadow-gold-lg: 0 0 2.5rem rgba(255, 215, 0, 0.6);
+  --card-shadow: 0 0.625rem 1.875rem rgba(136, 14, 79, 0.15);
 }
 
 *,
@@ -71,7 +71,7 @@ a {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(1.25rem);
   }
 
   to {
@@ -100,7 +100,7 @@ a {
   }
 
   50% {
-    transform: translateY(-20px) rotate(5deg);
+    transform: translateY(-1.25rem) rotate(5deg);
   }
 }
 
@@ -112,7 +112,7 @@ a {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
 }
 
@@ -140,11 +140,11 @@ a {
 
   0%,
   100% {
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+    filter: drop-shadow(0 0 1.25rem rgba(255, 215, 0, 0.4));
   }
 
   50% {
-    filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.8));
+    filter: drop-shadow(0 0 2.5rem rgba(255, 215, 0, 0.8));
   }
 }
 
@@ -152,11 +152,11 @@ a {
 
   0%,
   100% {
-    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 60px rgba(255, 140, 0, 0.4));
+    filter: drop-shadow(0 0 1.875rem rgba(255, 215, 0, 0.6)) drop-shadow(0 0 3.75rem rgba(255, 140, 0, 0.4));
   }
 
   50% {
-    filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 100px rgba(255, 140, 0, 0.6));
+    filter: drop-shadow(0 0 3.125rem rgba(255, 215, 0, 0.9)) drop-shadow(0 0 6.25rem rgba(255, 140, 0, 0.6));
   }
 }
 
@@ -252,15 +252,15 @@ a {
   }
 
   25% {
-    transform: translateY(-50vh) rotate(180deg) translateX(30px);
+    transform: translateY(-50vh) rotate(180deg) translateX(1.875rem);
   }
 
   50% {
-    transform: translateY(0) rotate(360deg) translateX(-20px);
+    transform: translateY(0) rotate(360deg) translateX(-1.25rem);
   }
 
   75% {
-    transform: translateY(50vh) rotate(540deg) translateX(25px);
+    transform: translateY(50vh) rotate(540deg) translateX(1.5625rem);
   }
 
   100% {
@@ -287,11 +287,11 @@ a {
 
   0%,
   100% {
-    text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
+    text-shadow: 0 0 0.625rem var(--gold), 0 0 1.25rem var(--gold);
   }
 
   50% {
-    text-shadow: 0 0 25px var(--gold), 0 0 45px var(--gold-dark), 0 0 65px var(--gold);
+    text-shadow: 0 0 1.5625rem var(--gold), 0 0 2.8125rem var(--gold-dark), 0 0 4.0625rem var(--gold);
   }
 }
 
@@ -326,7 +326,7 @@ a {
   }
 
   100% {
-    transform: translateY(12px);
+    transform: translateY(0.75rem);
     opacity: 0;
   }
 }
@@ -346,7 +346,7 @@ a {
   }
 
   100% {
-    transform: translateY(-150px) translateX(var(--tx, 0));
+    transform: translateY(-9.375rem) translateX(var(--tx, 0));
     opacity: 0;
   }
 }
@@ -394,7 +394,7 @@ a {
 
 .js-scroll-hidden {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(2.5rem);
 }
 
 .scroll-reveal.visible {
@@ -435,7 +435,7 @@ a {
 .mandala {
   width: 100%;
   height: 100%;
-  max-width: 900px;
+  max-width: 56.25rem;
   color: var(--gold);
 }
 
@@ -455,13 +455,13 @@ a {
   background: var(--gold);
   border-radius: 50%;
   animation: particleFloat 5s ease-out infinite;
-  box-shadow: 0 0 10px var(--gold);
+  box-shadow: 0 0 0.625rem var(--gold);
 }
 
 .corner-decor {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 11.25rem;
+  height: 11.25rem;
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
@@ -507,7 +507,7 @@ a {
   justify-content: safe;
   padding: 1rem;
   text-align: center;
-  max-width: 600px;
+  max-width: 37.5rem;
   height: 100%;
   max-height: 100vh;
 }
@@ -560,7 +560,7 @@ a {
 .ganpati-aura {
   position: absolute;
   border-radius: 50%;
-  filter: blur(40px);
+  filter: blur(2.5rem);
 }
 
 .ganpati-aura.aura-1 {
@@ -641,7 +641,7 @@ a {
   margin-bottom: 2rem;
   padding: 0 1rem;
   width: 100%;
-  max-width: 550px;
+  max-width: 34.375rem;
 }
 
 .mantra-border {
@@ -712,8 +712,8 @@ a {
 
 .diya {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 
 .diya-base {
@@ -721,11 +721,11 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 20px;
+  width: 3.125rem;
+  height: 1.25rem;
   background: linear-gradient(to bottom, #daa520, #b8860b);
   border-radius: 0 0 50% 50%;
-  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 .diya-base::before {
@@ -734,8 +734,8 @@ a {
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 10px;
+  width: 2.5rem;
+  height: 0.625rem;
   background: #cd853f;
   border-radius: 50%;
 }
@@ -745,26 +745,26 @@ a {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 8px;
+  width: 1.875rem;
+  height: 0.5rem;
   background: linear-gradient(to bottom, #8b4513, #654321);
   border-radius: 50%;
 }
 
 .flame-container {
   position: absolute;
-  bottom: 25px;
+  bottom: 1.5625rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .flame {
-  width: 12px;
-  height: 30px;
+  width: 0.75rem;
+  height: 1.875rem;
   background: linear-gradient(to top, #ff4500, #ff8c00 30%, #ffd700 60%, #fffacd);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   animation: flicker 0.4s ease-in-out infinite;
-  box-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff6600;
+  box-shadow: 0 0 0.625rem #ff8c00, 0 0 1.25rem #ff4500, 0 0 1.875rem #ff6600;
 }
 
 .flame.inner {
@@ -772,19 +772,19 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 18px;
+  width: 0.375rem;
+  height: 1.125rem;
   background: linear-gradient(to top, #ffff00, #fffacd);
   animation: flicker 0.3s ease-in-out infinite reverse;
 }
 
 .flame-glow {
   position: absolute;
-  bottom: 20px;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background: radial-gradient(circle, rgba(255, 165, 0, 0.5) 0%, transparent 70%);
   animation: auraPulse 1.5s ease-in-out infinite;
 }
@@ -792,7 +792,7 @@ a {
 .enter-button {
   position: relative;
   padding: 1.25rem 2.5rem;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   overflow: hidden;
   font-size: 1.1rem;
   font-weight: 600;
@@ -800,7 +800,7 @@ a {
   background: linear-gradient(90deg, var(--gold), var(--gold-dark), var(--gold));
   background-size: 200% 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0.25rem 1.25rem rgba(255, 215, 0, 0.4);
 }
 
 .enter-button:hover {
@@ -814,11 +814,11 @@ a {
 
 .btn-glow {
   position: absolute;
-  inset: -4px;
+  inset: -0.25rem;
   background: var(--gold);
-  border-radius: 50px;
+  border-radius: 3.125rem;
   opacity: 0.5;
-  filter: blur(15px);
+  filter: blur(0.9375rem);
   animation: auraPulse 2s ease-in-out infinite;
   z-index: -1;
 }
@@ -862,7 +862,7 @@ a {
 
 .petal {
   position: absolute;
-  top: -60px;
+  top: -3.75rem;
   animation: petalFall linear infinite;
 }
 
@@ -894,7 +894,7 @@ a {
   background: rgba(194, 24, 91, 0.4);
   backdrop-filter: blur(10px);
   padding: 0.75rem 2rem;
-  box-shadow: 0 4px 30px rgba(136, 14, 79, 0.2);
+  box-shadow: 0 0.25rem 1.875rem rgba(136, 14, 79, 0.2);
   border-bottom: 1px solid rgba(194, 24, 91, 0.3);
 }
 
@@ -941,8 +941,8 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   background: var(--gold);
   border-radius: 50%;
 }
@@ -951,17 +951,17 @@ a {
   padding: 0.5rem 1.5rem;
   background: var(--gold);
   color: var(--deep-red);
-  border-radius: 50px;
+  border-radius: 3.125rem;
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0.125rem 0.625rem rgba(255, 215, 0, 0.3);
 }
 
 .rsvp-btn:hover {
   background: var(--gold-light);
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0.25rem 1.25rem rgba(255, 215, 0, 0.5);
 }
 
 .desktop-only {
@@ -971,20 +971,20 @@ a {
 .mobile-menu-btn {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.3125rem;
   padding: 0.5rem;
 }
 
 .mobile-menu-btn span {
-  width: 24px;
-  height: 2px;
+  width: 1.5rem;
+  height: 0.125rem;
   background: var(--gold);
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .mobile-menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(0.3125rem, 0.3125rem);
 }
 
 .mobile-menu-btn.active span:nth-child(2) {
@@ -992,7 +992,7 @@ a {
 }
 
 .mobile-menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(0.3125rem, -0.3125rem);
 }
 
 .mobile-menu {
@@ -1008,7 +1008,7 @@ a {
   gap: 1.5rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
+  transform: translateY(-1.25rem);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1024,7 +1024,7 @@ a {
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
 }
 
 .mobile-menu.active .mobile-link {
@@ -1064,7 +1064,7 @@ a {
 .mobile-link:hover,
 .mobile-link.active {
   color: var(--gold);
-  transform: translateX(10px);
+  transform: translateX(0.625rem);
 }
 
 .mobile-rsvp-btn {
@@ -1111,7 +1111,7 @@ a {
   position: relative;
   z-index: 10;
   text-align: center;
-  max-width: 800px;
+  max-width: 50rem;
   padding: 2rem;
 }
 
@@ -1120,7 +1120,7 @@ a {
 }
 
 .ornament-svg {
-  width: 200px;
+  width: 12.5rem;
   margin: 0 auto;
 }
 
@@ -1129,7 +1129,7 @@ a {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 0.9375rem rgba(255, 215, 0, 0.4);
   animation: textGlow 3s ease-in-out infinite;
 }
 
@@ -1138,7 +1138,7 @@ a {
   font-family: var(--font-serif);
   font-size: 2.1rem;
   margin-bottom: 0.75rem;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.3);
 }
 
 .together-text {
@@ -1173,7 +1173,7 @@ a {
 .groom-name:hover {
   color: var(--gold);
   transform: scale(1.05);
-  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 1.875rem rgba(255, 215, 0, 0.5);
 }
 
 .ampersand {
@@ -1199,7 +1199,7 @@ a {
   padding: 0.5rem 2.5rem;
   background: rgba(255, 215, 0, 0.1);
   backdrop-filter: blur(10px);
-  border: 1.2px solid var(--gold);
+  border: 0.075rem solid var(--gold);
   border-radius: 2rem;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -1243,20 +1243,20 @@ a {
 }
 
 .scroll-mouse {
-  width: 24px;
-  height: 40px;
-  border: 2px solid rgba(255, 215, 0, 0.6);
-  border-radius: 12px;
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid rgba(255, 215, 0, 0.6);
+  border-radius: 0.75rem;
   display: flex;
   justify-content: center;
-  padding-top: 7px;
+  padding-top: 0.4375rem;
 }
 
 .scroll-wheel {
-  width: 6px;
-  height: 12px;
+  width: 0.375rem;
+  height: 0.75rem;
   background: var(--gold);
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   animation: scrollWheel 1.5s ease-in-out infinite;
 }
 
@@ -1270,7 +1270,7 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 0.125rem;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   opacity: 0.5;
 }
@@ -1284,7 +1284,7 @@ a {
 }
 
 .countdown-content {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -1318,16 +1318,16 @@ a {
 
 .time-box {
   position: relative;
-  width: 75px;
-  height: 90px;
+  width: 4.6875rem;
+  height: 5.625rem;
   background: linear-gradient(to bottom, var(--deep-red), var(--maroon));
   border-radius: 0.75rem;
-  border: 2px solid rgba(255, 215, 0, 0.5);
+  border: 0.125rem solid rgba(255, 215, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 0.25rem 1.25rem rgba(139, 0, 0, 0.3);
 }
 
 .time-box::before {
@@ -1343,7 +1343,7 @@ a {
   top: 50%;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 0.0625rem;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -1353,7 +1353,7 @@ a {
   font-size: 2.5rem;
   font-weight: 700;
   position: relative;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 .time-label {
@@ -1423,7 +1423,7 @@ a {
 .couple-grid {
   display: grid;
   gap: 3rem;
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 0 auto;
 }
 
@@ -1445,7 +1445,7 @@ a {
 .frame-ring {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid var(--gold);
+  border: 0.125rem solid var(--gold);
 }
 
 .frame-ring:first-child {
@@ -1479,11 +1479,11 @@ a {
 }
 
 .couple-photo {
-  width: 220px;
-  height: 220px;
+  width: 13.75rem;
+  height: 13.75rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid rgba(255, 215, 0, 0.6);
+  border: 0.25rem solid rgba(255, 215, 0, 0.6);
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1491,7 +1491,7 @@ a {
 
 .couple-card:hover .couple-photo {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 1.875rem rgba(255, 215, 0, 0.4);
 }
 
 .person-name {
@@ -1515,13 +1515,13 @@ a {
 .person-bio {
   color: #555;
   font-size: 0.95rem;
-  max-width: 350px;
+  max-width: 21.875rem;
   margin: 0 auto;
   line-height: 1.7;
 }
 
 .couple-quote {
-  max-width: 700px;
+  max-width: 43.75rem;
   margin: 4rem auto 0;
   padding: 2rem;
   background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(139, 0, 0, 0.05) 100%);
@@ -1554,7 +1554,7 @@ a {
 
 .timeline {
   position: relative;
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 0 auto;
 }
 
@@ -1563,7 +1563,7 @@ a {
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 0.125rem;
   background: rgba(255, 215, 0, 0.3);
   transform: translateX(-50%);
   z-index: 0;
@@ -1583,7 +1583,7 @@ a {
 .timeline-event {
   position: relative;
   width: 50%;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   margin-bottom: 0;
   box-sizing: border-box;
 }
@@ -1639,34 +1639,34 @@ a {
 .event-node {
   position: absolute;
   top: 2rem;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background: var(--deep-red);
-  border: 3px solid var(--gold);
+  border: 0.1875rem solid var(--gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
   transition: transform 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 0.9375rem rgba(255, 215, 0, 0.3);
 }
 
 .timeline-event.left .event-node {
-  right: -20px;
+  right: -1.25rem;
   left: auto;
   transform: none;
 }
 
 .timeline-event.right .event-node {
-  left: -20px;
+  left: -1.25rem;
   transform: none;
 }
 
 .timeline-event.active .event-node {
   background: var(--gold);
   transform: scale(1.2);
-  box-shadow: 0 0 25px var(--gold), 0 0 50px rgba(139, 0, 0, 0.5);
+  box-shadow: 0 0 1.5625rem var(--gold), 0 0 3.125rem rgba(139, 0, 0, 0.5);
   border-color: #fff;
 }
 
@@ -1706,24 +1706,24 @@ a {
 .bg-circle.circle-1 {
   top: 10%;
   left: 10%;
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
   animation: rotate 30s linear infinite, pulse 10s ease-in-out infinite;
 }
 
 .bg-circle.circle-2 {
   bottom: 10%;
   right: 10%;
-  width: 350px;
-  height: 350px;
+  width: 21.875rem;
+  height: 21.875rem;
   animation: rotateReverse 40s linear infinite, pulse 12s ease-in-out infinite;
 }
 
 .bg-circle.circle-3 {
   top: 40%;
   left: 20%;
-  width: 150px;
-  height: 150px;
+  width: 9.375rem;
+  height: 9.375rem;
   animation: rotate 25s linear infinite;
 }
 
@@ -1734,7 +1734,7 @@ a {
 .events-grid {
   display: grid;
   gap: 1.25rem;
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: 0 auto;
 }
 
@@ -1754,7 +1754,7 @@ a {
 .event-card:hover {
   transform: scale(1.02);
   border-color: var(--gold);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.2);
 }
 
 .event-accent {
@@ -1762,7 +1762,7 @@ a {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 6px;
+  width: 0.375rem;
 }
 
 .event-card[data-color="#FF6B6B"] .event-accent {
@@ -1850,7 +1850,7 @@ a {
 }
 
 .event-card.expanded .event-details {
-  max-height: 200px;
+  max-height: 12.5rem;
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px solid rgba(255, 215, 0, 0.2);
@@ -1871,10 +1871,10 @@ a {
 
 .venue-glow {
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 500px;
-  height: 500px;
+  top: -12.5rem;
+  right: -12.5rem;
+  width: 31.25rem;
+  height: 31.25rem;
   background: radial-gradient(circle, rgba(194, 24, 91, 0.1) 0%, transparent 70%);
   animation: auraPulse 8s ease-in-out infinite;
 }
@@ -1882,7 +1882,7 @@ a {
 .venue-grid {
   display: grid;
   gap: 3rem;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto 3rem;
 }
 
@@ -1898,7 +1898,7 @@ a {
 
 .venue-frame {
   inset: -1rem;
-  border: 2px solid rgba(255, 215, 0, 0.3);
+  border: 0.125rem solid rgba(255, 215, 0, 0.3);
 }
 
 .venue-frame-outer {
@@ -1909,10 +1909,10 @@ a {
 
 .venue-image {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .venue-image-overlay {
@@ -1962,8 +1962,8 @@ a {
 }
 
 .info-icon {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background: var(--deep-red);
   border-radius: 0.5rem;
   display: flex;
@@ -1996,28 +1996,28 @@ a {
   border-radius: 50px;
   font-weight: 500;
   margin-top: 1rem;
-  box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 1.25rem rgba(139, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .directions-btn:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 30px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 0.375rem 1.875rem rgba(139, 0, 0, 0.3);
 }
 
 .venue-map {
   position: relative;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  border: 4px solid rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.1);
+  border: 0.25rem solid rgba(255, 215, 0, 0.5);
 }
 
 .map-image {
   width: 100%;
-  height: 250px;
+  height: 15.625rem;
   object-fit: cover;
 }
 
@@ -2044,7 +2044,7 @@ a {
   color: var(--deep-red);
   border-radius: 50px;
   font-weight: 500;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -2082,14 +2082,14 @@ a {
 .filter-btn.active {
   background: var(--deep-red);
   color: var(--gold);
-  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 0.25rem 0.9375rem rgba(139, 0, 0, 0.3);
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
 }
 
@@ -2196,8 +2196,8 @@ a {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background: none;
   color: white;
   font-size: 1.5rem;
@@ -2216,8 +2216,8 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   font-size: 1.5rem;
@@ -2244,7 +2244,7 @@ a {
   max-height: 80vh;
   object-fit: contain;
   border-radius: 0.5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-info {
@@ -2295,17 +2295,17 @@ a {
 
 .blessings-decor.circle-1 {
   top: 10%;
-  left: -100px;
-  width: 300px;
-  height: 300px;
+  left: -6.25rem;
+  width: 18.75rem;
+  height: 18.75rem;
   animation: auraPulse 6s ease-in-out infinite;
 }
 
 .blessings-decor.circle-2 {
   bottom: 10%;
-  right: -100px;
-  width: 400px;
-  height: 400px;
+  right: -6.25rem;
+  width: 25rem;
+  height: 25rem;
   animation: auraPulse 8s ease-in-out infinite 2s;
 }
 
@@ -2314,13 +2314,13 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: 0 auto;
 }
 
 .blessings-form-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   background: white;
   padding: 2rem;
   border-radius: 1rem;
@@ -2339,7 +2339,7 @@ a {
 .blessing-form textarea {
   width: 100%;
   padding: 1rem;
-  border: 2px solid rgba(139, 0, 0, 0.1);
+  border: 0.125rem solid rgba(139, 0, 0, 0.1);
   border-radius: 0.5rem;
   font-family: inherit;
   font-size: 1rem;
@@ -2351,7 +2351,7 @@ a {
 .blessing-form textarea:focus {
   outline: none;
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 0 0.1875rem rgba(255, 215, 0, 0.2);
 }
 
 .send-blessing-btn {
@@ -2363,12 +2363,12 @@ a {
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.9375rem rgba(139, 0, 0, 0.2);
 }
 
 .send-blessing-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 0.375rem 1.5625rem rgba(139, 0, 0, 0.3);
 }
 
 .success-message {
@@ -2382,7 +2382,7 @@ a {
 
 .blessings-list {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2392,14 +2392,14 @@ a {
   background: white;
   padding: 1.25rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 215, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blessing-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.1);
 }
 
 .blessing-header {
@@ -2416,8 +2416,8 @@ a {
 }
 
 .author-avatar {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background: linear-gradient(135deg, var(--deep-red), var(--maroon));
   color: var(--gold);
   border-radius: 50%;
@@ -2468,13 +2468,13 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 0.25rem;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
 }
 
 .footer-content {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -2499,7 +2499,7 @@ a {
   margin: 0;
   margin-bottom: 0.5rem;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
 }
 
 .footer-compliments {
@@ -2513,7 +2513,7 @@ a {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
   font-family: "Dancing Script", cursive;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
 }
 
 .parents-names {
@@ -2529,7 +2529,7 @@ a {
 
 .footer-date {
   font-size: 1.1rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: rgba(238, 233, 215, 0.8);
   font-weight: 300;
   text-transform: uppercase;
@@ -2598,7 +2598,7 @@ a {
   font-weight: 700;
   position: relative;
   display: inline-block;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 0.625rem rgba(255, 215, 0, 0.8);
   animation: pulse 1.5s infinite ease-in-out;
   padding: 0 4px;
   transition: all 0.3s ease;
@@ -2607,7 +2607,7 @@ a {
 .credit-link:hover {
   text-decoration: none;
   color: #fff;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px var(--gold);
+  text-shadow: 0 0 1.25rem rgba(255, 255, 255, 1), 0 0 1.875rem var(--gold);
   transform: scale(1.2);
 }
 
@@ -2616,7 +2616,7 @@ a {
   color: var(--gold) !important;
   font-weight: 600;
   margin-top: 0.5rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 .footer-divider {
@@ -2726,11 +2726,11 @@ a {
 @media (max-width: 768px) {
   .timeline {
     max-width: 100%;
-    padding-left: 10px;
+    padding-left: 0.625rem;
   }
 
   .timeline-line {
-    left: 30px;
+    left: 1.875rem;
     transform: none;
   }
 
@@ -2739,8 +2739,8 @@ a {
   .timeline-event.right {
     width: 100%;
     left: 0;
-    padding-left: 70px;
-    padding-right: 20px;
+    padding-left: 4.375rem;
+    padding-right: 1.25rem;
     text-align: left;
     margin-bottom: 2rem;
   }
@@ -2752,7 +2752,7 @@ a {
   .event-node,
   .timeline-event.left .event-node,
   .timeline-event.right .event-node {
-    left: 30px;
+    left: 1.875rem;
     right: auto;
     transform: translateX(-50%);
   }
@@ -2775,7 +2775,7 @@ a {
 @keyframes heroFadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(1.875rem);
   }
 
   to {
@@ -2867,6 +2867,6 @@ a {
 
 .footer-instagram-icon {
   vertical-align: middle;
-  margin-left: 2px;
-  margin-bottom: 2px;
+  margin-left: 0.125rem;
+  margin-bottom: 0.125rem;
 }

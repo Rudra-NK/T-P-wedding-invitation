@@ -392,6 +392,9 @@ function initGallery() {
           setTimeout(() => {
             item.style.opacity = "1"
             item.style.transform = "scale(1)"
+            setTimeout(() => {
+              item.style.transform = ""
+            }, 350)
           }, 50)
         } else {
           item.style.opacity = "0"
