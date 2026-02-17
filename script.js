@@ -299,7 +299,7 @@ function updateActiveSection() {
   })
 }
 function initCountdown() {
-  const targetDate = new Date("2026-02-04T23:00:00+05:30").getTime()
+  const targetDate = new Date("2026-02-25T23:00:00+05:30").getTime()
   function updateCountdown() {
     const now = new Date().getTime()
     const distance = targetDate - now
