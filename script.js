@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initEventCards()
   initGallery()
   initLightbox()
+  initVideoPlayer()
   initBlessings()
 })
 function initThreeJSBackground() {
@@ -283,7 +284,7 @@ function initNavigation() {
   })
 }
 function updateActiveSection() {
-  const sections = ["home", "couple", "story", "events", "venue", "gallery", "blessings"]
+  const sections = ["home", "couple", "story", "events", "venue", "gallery", "invitation-video", "blessings"]
   let currentSection = "home"
   sections.forEach((section) => {
     const element = document.getElementById(section)
@@ -580,4 +581,97 @@ function initBlessings() {
         )
     })
   }
+}
+function initVideoPlayer() {
+  const video = document.getElementById("invitation-vid")
+  const overlay = document.getElementById("video-overlay")
+  const playBtn = document.getElementById("video-play-btn")
+  const controls = document.getElementById("video-controls")
+  const playPauseBtn = document.getElementById("vc-play-pause")
+  const progressBar = document.getElementById("vc-progress-bar")
+  const progress = document.getElementById("vc-progress")
+  const timeDisplay = document.getElementById("vc-time")
+  const muteBtn = document.getElementById("vc-mute")
+  const fullscreenBtn = document.getElementById("vc-fullscreen")
+  const container = document.getElementById("video-container")
+  if (!video || !overlay) return
+
+  function formatTime(s) {
+    const m = Math.floor(s / 60)
+    const sec = Math.floor(s % 60)
+    return `${m}:${sec < 10 ? "0" : ""}${sec}`
+  }
+
+  function playVideo() {
+    video.play()
+    overlay.classList.add("hidden")
+    controls.classList.add("visible")
+    if (playPauseBtn) playPauseBtn.textContent = "\u23f8"
+  }
+
+  function pauseVideo() {
+    video.pause()
+    if (playPauseBtn) playPauseBtn.textContent = "\u25b6"
+  }
+
+  function togglePlay() {
+    if (video.paused || video.ended) {
+      playVideo()
+    } else {
+      pauseVideo()
+    }
+  }
+
+  if (playBtn) playBtn.addEventListener("click", playVideo)
+  overlay.addEventListener("click", playVideo)
+  if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlay)
+  video.addEventListener("click", togglePlay)
+
+  video.addEventListener("timeupdate", () => {
+    if (video.duration) {
+      const pct = (video.currentTime / video.duration) * 100
+      if (progress) progress.style.width = pct + "%"
+      if (timeDisplay) timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`
+    }
+  })
+
+  if (progressBar) {
+    progressBar.addEventListener("click", (e) => {
+      const rect = progressBar.getBoundingClientRect()
+      const pct = (e.clientX - rect.left) / rect.width
+      video.currentTime = pct * video.duration
+    })
+  }
+
+  if (muteBtn) {
+    muteBtn.addEventListener("click", () => {
+      video.muted = !video.muted
+      muteBtn.textContent = video.muted ? "\ud83d\udd07" : "\ud83d\udd0a"
+    })
+  }
+
+  if (fullscreenBtn && container) {
+    fullscreenBtn.addEventListener("click", () => {
+      if (container.requestFullscreen) {
+        container.requestFullscreen()
+      } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen()
+      }
+    })
+  }
+
+  video.addEventListener("ended", () => {
+    overlay.classList.remove("hidden")
+    controls.classList.remove("visible")
+    if (playPauseBtn) playPauseBtn.textContent = "\u25b6"
+  })
+
+  let controlTimeout
+  container.addEventListener("touchstart", () => {
+    controls.classList.add("visible")
+    clearTimeout(controlTimeout)
+    controlTimeout = setTimeout(() => {
+      if (!video.paused) controls.classList.remove("visible")
+    }, 3000)
+  }, { passive: true })
 }

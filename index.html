@@ -179,6 +179,7 @@
         <a href="#events" class="nav-link">Events</a>
         <a href="#venue" class="nav-link">Venue</a>
         <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#invitation-video" class="nav-link">Video</a>
         <a href="#blessings" class="nav-link">Blessings</a>
       </div>
       <button id="mobile-menu-btn" class="mobile-menu-btn">
@@ -194,6 +195,7 @@
       <a href="#events" class="mobile-link">Events</a>
       <a href="#venue" class="mobile-link">Venue</a>
       <a href="#gallery" class="mobile-link">Gallery</a>
+      <a href="#invitation-video" class="mobile-link">Video</a>
       <a href="#blessings" class="mobile-link">Blessings</a>
     </div>
     <div id="main-petals" class="petals-container"></div>
@@ -573,6 +575,46 @@
       </div>
       <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">8</span></div>
     </div>
+    <section id="invitation-video" class="video-section">
+      <div class="video-bg-glow video-glow-1"></div>
+      <div class="video-bg-glow video-glow-2"></div>
+      <div class="section-header scroll-reveal">
+        <span class="section-label"><span class="sparkle">✦</span> Watch Our Story <span class="sparkle">✦</span></span>
+        <h2 class="section-title">Invitation</h2>
+        <p class="video-subtitle">Play to see a special message from us</p>
+      </div>
+      <div class="video-showcase scroll-reveal">
+        <div class="video-frame">
+          <div class="video-frame-ring ring-outer"></div>
+          <div class="video-frame-ring ring-inner"></div>
+          <div class="video-container" id="video-container">
+            <video id="invitation-vid" preload="metadata" playsinline>
+              <source src="asset/invitation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay" id="video-overlay">
+              <button class="video-play-btn" id="video-play-btn" aria-label="Play Video">
+                <span class="play-btn-ring"></span>
+                <span class="play-btn-glow"></span>
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="var(--gold)">
+                  <polygon points="6,3 20,12 6,21"/>
+                </svg>
+              </button>
+              <p class="video-play-text">Tap to Play</p>
+            </div>
+            <div class="video-controls" id="video-controls">
+              <button class="vc-btn" id="vc-play-pause" aria-label="Play/Pause">⏸</button>
+              <div class="vc-progress-bar" id="vc-progress-bar">
+                <div class="vc-progress" id="vc-progress"></div>
+              </div>
+              <span class="vc-time" id="vc-time">0:00 / 0:00</span>
+              <button class="vc-btn" id="vc-mute" aria-label="Mute/Unmute">🔊</button>
+              <button class="vc-btn" id="vc-fullscreen" aria-label="Fullscreen">⛶</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="blessings" class="blessings-section">
       <div class="blessings-decor circle-1"></div>
       <div class="blessings-decor circle-2"></div>
